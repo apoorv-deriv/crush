@@ -1,21 +1,21 @@
-# Crush
+# Supernova
 
 <p align="center">
-    <a href="https://stuff.charm.sh/crush/charm-crush.png"><img width="450" alt="Charm Crush Logo" src="https://github.com/user-attachments/assets/adc1a6f4-b284-4603-836c-59038caa2e8b" /></a><br />
-    <a href="https://github.com/charmbracelet/crush/releases"><img src="https://img.shields.io/github/release/charmbracelet/crush" alt="Latest Release"></a>
-    <a href="https://github.com/charmbracelet/crush/actions"><img src="https://github.com/charmbracelet/crush/workflows/build/badge.svg" alt="Build Status"></a>
+    <a href="https://stuff.charm.sh/supernova/charm-supernova.png"><img width="450" alt="Charm Supernova Logo" src="https://github.com/user-attachments/assets/adc1a6f4-b284-4603-836c-59038caa2e8b" /></a><br />
+    <a href="https://github.com/charmbracelet/supernova/releases"><img src="https://img.shields.io/github/release/charmbracelet/supernova" alt="Latest Release"></a>
+    <a href="https://github.com/charmbracelet/supernova/actions"><img src="https://github.com/charmbracelet/supernova/workflows/build/badge.svg" alt="Build Status"></a>
 </p>
 
 <p align="center">Your new coding bestie, now available in your favourite terminal.<br />Your tools, your code, and your workflows, wired into your LLM of choice.</p>
 
-<p align="center"><img width="800" alt="Crush Demo" src="https://github.com/user-attachments/assets/58280caf-851b-470a-b6f7-d5c4ea8a1968" /></p>
+<p align="center"><img width="800" alt="Supernova Demo" src="https://github.com/user-attachments/assets/58280caf-851b-470a-b6f7-d5c4ea8a1968" /></p>
 
 ## Features
 
 - **Multi-Model:** choose from a wide range of LLMs or add your own via OpenAI- or Anthropic-compatible APIs
 - **Flexible:** switch LLMs mid-session while preserving context
 - **Session-Based:** maintain multiple work sessions and contexts per project
-- **LSP-Enhanced:** Crush uses LSPs for additional context, just like you do
+- **LSP-Enhanced:** Supernova uses LSPs for additional context, just like you do
 - **Extensible:** add capabilities via MCPs (`http`, `stdio`, and `sse`)
 - **Works Everywhere:** first-class support in every terminal on macOS, Linux, Windows (PowerShell and WSL), FreeBSD, OpenBSD, and NetBSD
 
@@ -25,36 +25,36 @@ Use a package manager:
 
 ```bash
 # Homebrew
-brew install charmbracelet/tap/crush
+brew install charmbracelet/tap/supernova
 
 # NPM
-npm install -g @charmland/crush
+npm install -g @charmland/supernova
 
 # Arch Linux (btw)
-yay -S crush-bin
+yay -S supernova-bin
 
 # Nix
-nix run github:numtide/nix-ai-tools#crush
+nix run github:numtide/nix-ai-tools#supernova
 
 # Scoop
 scoop bucket add charm https://github.com/charmbracelet/scoop-bucket.git
-scoop install crush
+scoop install supernova
 ```
 
 <details>
 <summary><strong>Nix (NUR)</strong></summary>
 
-Crush is available via [NUR](https://github.com/nix-community/NUR) in `nur.repos.charmbracelet.crush`.
+Supernova is available via [NUR](https://github.com/nix-community/NUR) in `nur.repos.charmbracelet.supernova`.
 
-You can also try out Crush via `nix-shell`:
+You can also try out Supernova via `nix-shell`:
 
 ```bash
 # Add the NUR channel.
 nix-channel --add https://github.com/nix-community/NUR/archive/main.tar.gz nur
 nix-channel --update
 
-# Get Crush in a Nix shell.
-nix-shell -p '(import <nur> { pkgs = import <nixpkgs> {}; }).repos.charmbracelet.crush'
+# Get Supernova in a Nix shell.
+nix-shell -p '(import <nur> { pkgs = import <nixpkgs> {}; }).repos.charmbracelet.supernova'
 ```
 
 </details>
@@ -66,7 +66,7 @@ nix-shell -p '(import <nur> { pkgs = import <nixpkgs> {}; }).repos.charmbracelet
 sudo mkdir -p /etc/apt/keyrings
 curl -fsSL https://repo.charm.sh/apt/gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/charm.gpg
 echo "deb [signed-by=/etc/apt/keyrings/charm.gpg] https://repo.charm.sh/apt/ * *" | sudo tee /etc/apt/sources.list.d/charm.list
-sudo apt update && sudo apt install crush
+sudo apt update && sudo apt install supernova
 ```
 
 </details>
@@ -81,7 +81,7 @@ baseurl=https://repo.charm.sh/yum/
 enabled=1
 gpgcheck=1
 gpgkey=https://repo.charm.sh/yum/gpg.key' | sudo tee /etc/yum.repos.d/charm.repo
-sudo yum install crush
+sudo yum install supernova
 ```
 
 </details>
@@ -91,16 +91,16 @@ Or, download it:
 - [Packages][releases] are available in Debian and RPM formats
 - [Binaries][releases] are available for Linux, macOS, Windows, FreeBSD, OpenBSD, and NetBSD
 
-[releases]: https://github.com/charmbracelet/crush/releases
+[releases]: https://github.com/charmbracelet/supernova/releases
 
 Or just install it with Go:
 
 ```
-go install github.com/charmbracelet/crush@latest
+go install github.com/charmbracelet/supernova@latest
 ```
 
 > [!WARNING]
-> Productivity may increase when using Crush and you may find yourself nerd
+> Productivity may increase when using Supernova and you may find yourself nerd
 > sniped when first using the application. If the symptoms persist, join the
 > [Discord][discord] and nerd snipe the rest of us.
 
@@ -108,7 +108,7 @@ go install github.com/charmbracelet/crush@latest
 
 The quickest way to get started is to grab an API key for your preferred
 provider such as Anthropic, OpenAI, Groq, or OpenRouter and just start
-Crush. You'll be prompted to enter your API key.
+Supernova. You'll be prompted to enter your API key.
 
 That said, you can also set environment variables for preferred providers.
 
@@ -130,21 +130,21 @@ That said, you can also set environment variables for preferred providers.
 
 ### By the Way
 
-Is there a provider you’d like to see in Crush? Is there an existing model that needs an update?
+Is there a provider you’d like to see in Supernova? Is there an existing model that needs an update?
 
-Crush’s default model listing is managed in [Catwalk](https://github.com/charmbracelet/catwalk), an community-supported, open source repository of Crush-compatible models, and you’re welcome to contribute.
+Supernova’s default model listing is managed in [Catwalk](https://github.com/charmbracelet/catwalk), an community-supported, open source repository of Supernova-compatible models, and you’re welcome to contribute.
 
 <a href="https://github.com/charmbracelet/catwalk"><img width="174" height="174" alt="Catwalk Badge" src="https://github.com/user-attachments/assets/95b49515-fe82-4409-b10d-5beb0873787d" /></a>
 
 ## Configuration
 
-Crush runs great with no configuration. That said, if you do need or want to
-customize Crush, configuration can be added either local to the project itself,
+Supernova runs great with no configuration. That said, if you do need or want to
+customize Supernova, configuration can be added either local to the project itself,
 or globally, with the following priority:
 
-1. `.crush.json`
-2. `crush.json`
-3. `$HOME/.config/crush/crush.json` (Windows: `%USERPROFILE%\AppData\Local\crush\crush.json`)
+1. `.supernova.json`
+2. `supernova.json`
+3. `$HOME/.config/supernova/supernova.json` (Windows: `%USERPROFILE%\AppData\Local\supernova\supernova.json`)
 
 Configuration itself is stored as a JSON object:
 
@@ -155,24 +155,24 @@ Configuration itself is stored as a JSON object:
 }
 ```
 
-As an additional note, Crush also stores ephemeral data, such as application state, in one additional location:
+As an additional note, Supernova also stores ephemeral data, such as application state, in one additional location:
 
 ```bash
 # Unix
-$HOME/.local/share/crush/crush.json
+$HOME/.local/share/supernova/supernova.json
 
 # Windows
-%LOCALAPPDATA%\crush\crush.json
+%LOCALAPPDATA%\supernova\supernova.json
 ```
 
 ### LSPs
 
-Crush can use LSPs for additional context to help inform its decisions, just
+Supernova can use LSPs for additional context to help inform its decisions, just
 like you would. LSPs can be added manually like so:
 
 ```json
 {
-  "$schema": "https://charm.land/crush.json",
+  "$schema": "https://charm.land/supernova.json",
   "lsp": {
     "go": {
       "command": "gopls"
@@ -190,14 +190,14 @@ like you would. LSPs can be added manually like so:
 
 ### MCPs
 
-Crush also supports Model Context Protocol (MCP) servers through three
+Supernova also supports Model Context Protocol (MCP) servers through three
 transport types: `stdio` for command-line servers, `http` for HTTP endpoints,
 and `sse` for Server-Sent Events. Environment variable expansion is supported
 using `$(echo $VAR)` syntax.
 
 ```json
 {
-  "$schema": "https://charm.land/crush.json",
+  "$schema": "https://charm.land/supernova.json",
   "mcp": {
     "filesystem": {
       "type": "stdio",
@@ -227,23 +227,23 @@ using `$(echo $VAR)` syntax.
 
 ### Ignoring Files
 
-Crush respects `.gitignore` files by default, but you can also create a
-`.crushignore` file to specify additional files and directories that Crush
+Supernova respects `.gitignore` files by default, but you can also create a
+`.supernovaignore` file to specify additional files and directories that Supernova
 should ignore. This is useful for excluding files that you want in version
-control but don't want Crush to consider when providing context.
+control but don't want Supernova to consider when providing context.
 
-The `.crushignore` file uses the same syntax as `.gitignore` and can be placed
+The `.supernovaignore` file uses the same syntax as `.gitignore` and can be placed
 in the root of your project or in subdirectories.
 
 ### Allowing Tools
 
-By default, Crush will ask you for permission before running tool calls. If
+By default, Supernova will ask you for permission before running tool calls. If
 you'd like, you can allow tools to be executed without prompting you for
 permissions. Use this with care.
 
 ```json
 {
-  "$schema": "https://charm.land/crush.json",
+  "$schema": "https://charm.land/supernova.json",
   "permissions": {
     "allowed_tools": [
       "view",
@@ -256,7 +256,7 @@ permissions. Use this with care.
 }
 ```
 
-You can also skip all permission prompts entirely by running Crush with the
+You can also skip all permission prompts entirely by running Supernova with the
 `--yolo` flag. Be very, very careful with this feature.
 
 ### Local Models
@@ -309,7 +309,7 @@ Local models can also be configured via OpenAI-compatible API. Here are two comm
 
 ### Custom Providers
 
-Crush supports custom provider configurations for both OpenAI-compatible and
+Supernova supports custom provider configurations for both OpenAI-compatible and
 Anthropic-compatible APIs.
 
 #### OpenAI-Compatible APIs
@@ -319,7 +319,7 @@ API. Don't forget to set `DEEPSEEK_API_KEY` in your environment.
 
 ```json
 {
-  "$schema": "https://charm.land/crush.json",
+  "$schema": "https://charm.land/supernova.json",
   "providers": {
     "deepseek": {
       "type": "openai",
@@ -348,7 +348,7 @@ Custom Anthropic-compatible providers follow this format:
 
 ```json
 {
-  "$schema": "https://charm.land/crush.json",
+  "$schema": "https://charm.land/supernova.json",
   "providers": {
     "custom-anthropic": {
       "type": "anthropic",
@@ -378,11 +378,11 @@ Custom Anthropic-compatible providers follow this format:
 
 ### Amazon Bedrock
 
-Crush currently supports running Anthropic models through Bedrock, with caching disabled.
+Supernova currently supports running Anthropic models through Bedrock, with caching disabled.
 
 * A Bedrock provider will appear once you have AWS configured, i.e. `aws configure`
-* Crush also expects the `AWS_REGION` or `AWS_DEFAULT_REGION` to be set
-* To use a specific AWS profile set `AWS_PROFILE` in your environment, i.e. `AWS_PROFILE=myprofile crush`
+* Supernova also expects the `AWS_REGION` or `AWS_DEFAULT_REGION` to be set
+* To use a specific AWS profile set `AWS_PROFILE` in your environment, i.e. `AWS_PROFILE=myprofile supernova`
 
 ### Vertex AI Platform
 
@@ -396,7 +396,7 @@ To add specific models to the configuration, configure as such:
 
 ```json
 {
-  "$schema": "https://charm.land/crush.json",
+  "$schema": "https://charm.land/supernova.json",
   "providers": {
     "vertexai": {
       "models": [
@@ -420,7 +420,7 @@ To add specific models to the configuration, configure as such:
 
 ## A Note on Claude Max and GitHub Copilot
 
-Crush only supports model providers through official, compliant APIs. We do not
+Supernova only supports model providers through official, compliant APIs. We do not
 support or endorse any methods that rely on personal Claude Max and GitHub Copilot
 accounts or OAuth workarounds, which may violate Anthropic and Microsoft’s
 Terms of Service.
@@ -431,28 +431,28 @@ providers. If you’re a provider interested in working with us,
 
 ## Logging
 
-Sometimes you need to look at logs. Luckily, Crush logs all sorts of
-stuff. Logs are stored in `./.crush/logs/crush.log` relative to the project.
+Sometimes you need to look at logs. Luckily, Supernova logs all sorts of
+stuff. Logs are stored in `./.supernova/logs/supernova.log` relative to the project.
 
 The CLI also contains some helper commands to make perusing recent logs easier:
 
 ```bash
 # Print the last 1000 lines
-crush logs
+supernova logs
 
 # Print the last 500 lines
-crush logs --tail 500
+supernova logs --tail 500
 
 # Follow logs in real time
-crush logs --follow
+supernova logs --follow
 ```
 
-Want more logging? Run `crush` with the `--debug` flag, or enable it in the
+Want more logging? Run `supernova` with the `--debug` flag, or enable it in the
 config:
 
 ```json
 {
-  "$schema": "https://charm.land/crush.json",
+  "$schema": "https://charm.land/supernova.json",
   "options": {
     "debug": true,
     "debug_lsp": true
@@ -473,7 +473,7 @@ We’d love to hear your thoughts on this project. Need help? We gotchu. You can
 
 ## License
 
-[FSL-1.1-MIT](https://github.com/charmbracelet/crush/raw/main/LICENSE)
+[FSL-1.1-MIT](https://github.com/charmbracelet/supernova/raw/main/LICENSE)
 
 ---
 

@@ -26,7 +26,7 @@ tasks:
   dev:
     desc: Run with profiling enabled
     env:
-      CRUSH_PROFILE: true
+      SUPERNOVA_PROFILE: true
     cmds:
       - go run .
 

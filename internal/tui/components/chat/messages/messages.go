@@ -15,14 +15,14 @@ import (
 	"github.com/google/uuid"
 
 	"github.com/atotto/clipboard"
-	"github.com/charmbracelet/crush/internal/config"
-	"github.com/charmbracelet/crush/internal/message"
-	"github.com/charmbracelet/crush/internal/tui/components/anim"
-	"github.com/charmbracelet/crush/internal/tui/components/core"
-	"github.com/charmbracelet/crush/internal/tui/components/core/layout"
-	"github.com/charmbracelet/crush/internal/tui/exp/list"
-	"github.com/charmbracelet/crush/internal/tui/styles"
-	"github.com/charmbracelet/crush/internal/tui/util"
+	"github.com/charmbracelet/supernova/internal/config"
+	"github.com/charmbracelet/supernova/internal/message"
+	"github.com/charmbracelet/supernova/internal/tui/components/anim"
+	"github.com/charmbracelet/supernova/internal/tui/components/core"
+	"github.com/charmbracelet/supernova/internal/tui/components/core/layout"
+	"github.com/charmbracelet/supernova/internal/tui/exp/list"
+	"github.com/charmbracelet/supernova/internal/tui/styles"
+	"github.com/charmbracelet/supernova/internal/tui/util"
 )
 
 // CopyKey is the key binding for copying message content to the clipboard.

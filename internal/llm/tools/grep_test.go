@@ -80,9 +80,9 @@ func TestGrepWithIgnoreFiles(t *testing.T) {
 	gitignoreContent := "ignored/\n*.key\n"
 	require.NoError(t, os.WriteFile(filepath.Join(tempDir, ".gitignore"), []byte(gitignoreContent), 0o644))
 
-	// Create .crushignore file
+	// Create .supernovaignore file
 	crushignoreContent := "node_modules/\n"
-	require.NoError(t, os.WriteFile(filepath.Join(tempDir, ".crushignore"), []byte(crushignoreContent), 0o644))
+	require.NoError(t, os.WriteFile(filepath.Join(tempDir, ".supernovaignore"), []byte(crushignoreContent), 0o644))
 
 	// Create grep tool
 	grepTool := NewGrepTool(tempDir)
@@ -102,7 +102,7 @@ func TestGrepWithIgnoreFiles(t *testing.T) {
 
 	// Check results - should only find file1.txt and file2.txt
 	// ignored/file3.txt should be ignored by .gitignore
-	// node_modules/lib.js should be ignored by .crushignore
+	// node_modules/lib.js should be ignored by .supernovaignore
 	// secret.key should be ignored by .gitignore
 	result := response.Content
 	require.Contains(t, result, "file1.txt")
@@ -133,7 +133,7 @@ func TestSearchImplementations(t *testing.T) {
 	}
 
 	require.NoError(t, os.WriteFile(filepath.Join(tempDir, ".gitignore"), []byte("file4.txt\n"), 0o644))
-	require.NoError(t, os.WriteFile(filepath.Join(tempDir, ".crushignore"), []byte("file5.txt\n"), 0o644))
+	require.NoError(t, os.WriteFile(filepath.Join(tempDir, ".supernovaignore"), []byte("file5.txt\n"), 0o644))
 
 	for name, fn := range map[string]func(pattern, path, include string) ([]grepMatch, error){
 		"regex": searchFilesWithRegex,

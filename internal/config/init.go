@@ -52,7 +52,7 @@ func ProjectNeedsInitialization() (bool, error) {
 
 	crushExists, err := crushMdExists(cfg.WorkingDir())
 	if err != nil {
-		return false, fmt.Errorf("failed to check for CRUSH.md files: %w", err)
+		return false, fmt.Errorf("failed to check for SUPERNOVA.md files: %w", err)
 	}
 	if crushExists {
 		return false, nil

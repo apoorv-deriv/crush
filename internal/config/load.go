@@ -16,9 +16,9 @@ import (
 	"sync"
 
 	"github.com/charmbracelet/catwalk/pkg/catwalk"
-	"github.com/charmbracelet/crush/internal/csync"
-	"github.com/charmbracelet/crush/internal/env"
-	"github.com/charmbracelet/crush/internal/log"
+	"github.com/charmbracelet/supernova/internal/csync"
+	"github.com/charmbracelet/supernova/internal/env"
+	"github.com/charmbracelet/supernova/internal/log"
 )
 
 const defaultCatwalkURL = "https://catwalk.charm.sh"

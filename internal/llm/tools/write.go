@@ -10,12 +10,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/charmbracelet/crush/internal/diff"
-	"github.com/charmbracelet/crush/internal/fsext"
-	"github.com/charmbracelet/crush/internal/history"
+	"github.com/charmbracelet/supernova/internal/diff"
+	"github.com/charmbracelet/supernova/internal/fsext"
+	"github.com/charmbracelet/supernova/internal/history"
 
-	"github.com/charmbracelet/crush/internal/lsp"
-	"github.com/charmbracelet/crush/internal/permission"
+	"github.com/charmbracelet/supernova/internal/lsp"
+	"github.com/charmbracelet/supernova/internal/permission"
 )
 
 type WriteParams struct {

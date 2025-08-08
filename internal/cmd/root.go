@@ -8,11 +8,11 @@ import (
 	"os"
 
 	tea "github.com/charmbracelet/bubbletea/v2"
-	"github.com/charmbracelet/crush/internal/app"
-	"github.com/charmbracelet/crush/internal/config"
-	"github.com/charmbracelet/crush/internal/db"
-	"github.com/charmbracelet/crush/internal/tui"
-	"github.com/charmbracelet/crush/internal/version"
+	"github.com/charmbracelet/supernova/internal/app"
+	"github.com/charmbracelet/supernova/internal/config"
+	"github.com/charmbracelet/supernova/internal/db"
+	"github.com/charmbracelet/supernova/internal/tui"
+	"github.com/charmbracelet/supernova/internal/version"
 	"github.com/charmbracelet/fang"
 	"github.com/charmbracelet/x/term"
 	"github.com/spf13/cobra"
@@ -29,29 +29,29 @@ func init() {
 }
 
 var rootCmd = &cobra.Command{
-	Use:   "crush",
+	Use:   "supernova",
 	Short: "Terminal-based AI assistant for software development",
-	Long: `Crush is a powerful terminal-based AI assistant that helps with software development tasks.
+	Long: `Supernova is a powerful terminal-based AI assistant that helps with software development tasks.
 It provides an interactive chat interface with AI capabilities, code analysis, and LSP integration
 to assist developers in writing, debugging, and understanding code directly from the terminal.`,
 	Example: `
 # Run in interactive mode
-crush
+supernova
 
 # Run with debug logging
-crush -d
+supernova -d
 
 # Run with debug logging in a specific directory
-crush -d -c /path/to/project
+supernova -d -c /path/to/project
 
 # Print version
-crush -v
+supernova -v
 
 # Run a single non-interactive prompt
-crush run "Explain the use of context in Go"
+supernova run "Explain the use of context in Go"
 
 # Run in dangerous mode (auto-accept all permissions)
-crush -y
+supernova -y
   `,
 	RunE: func(cmd *cobra.Command, args []string) error {
 		app, err := setupApp(cmd)

@@ -11,19 +11,19 @@ import (
 	"time"
 
 	tea "github.com/charmbracelet/bubbletea/v2"
-	"github.com/charmbracelet/crush/internal/config"
-	"github.com/charmbracelet/crush/internal/csync"
-	"github.com/charmbracelet/crush/internal/db"
-	"github.com/charmbracelet/crush/internal/format"
-	"github.com/charmbracelet/crush/internal/history"
-	"github.com/charmbracelet/crush/internal/llm/agent"
-	"github.com/charmbracelet/crush/internal/log"
-	"github.com/charmbracelet/crush/internal/pubsub"
+	"github.com/charmbracelet/supernova/internal/config"
+	"github.com/charmbracelet/supernova/internal/csync"
+	"github.com/charmbracelet/supernova/internal/db"
+	"github.com/charmbracelet/supernova/internal/format"
+	"github.com/charmbracelet/supernova/internal/history"
+	"github.com/charmbracelet/supernova/internal/llm/agent"
+	"github.com/charmbracelet/supernova/internal/log"
+	"github.com/charmbracelet/supernova/internal/pubsub"
 
-	"github.com/charmbracelet/crush/internal/lsp"
-	"github.com/charmbracelet/crush/internal/message"
-	"github.com/charmbracelet/crush/internal/permission"
-	"github.com/charmbracelet/crush/internal/session"
+	"github.com/charmbracelet/supernova/internal/lsp"
+	"github.com/charmbracelet/supernova/internal/message"
+	"github.com/charmbracelet/supernova/internal/permission"
+	"github.com/charmbracelet/supernova/internal/session"
 )
 
 type App struct {

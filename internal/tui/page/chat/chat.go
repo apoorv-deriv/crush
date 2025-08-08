@@ -8,30 +8,30 @@ import (
 	"github.com/charmbracelet/bubbles/v2/key"
 	"github.com/charmbracelet/bubbles/v2/spinner"
 	tea "github.com/charmbracelet/bubbletea/v2"
-	"github.com/charmbracelet/crush/internal/app"
-	"github.com/charmbracelet/crush/internal/config"
-	"github.com/charmbracelet/crush/internal/history"
-	"github.com/charmbracelet/crush/internal/message"
-	"github.com/charmbracelet/crush/internal/permission"
-	"github.com/charmbracelet/crush/internal/pubsub"
-	"github.com/charmbracelet/crush/internal/session"
-	"github.com/charmbracelet/crush/internal/tui/components/anim"
-	"github.com/charmbracelet/crush/internal/tui/components/chat"
-	"github.com/charmbracelet/crush/internal/tui/components/chat/editor"
-	"github.com/charmbracelet/crush/internal/tui/components/chat/header"
-	"github.com/charmbracelet/crush/internal/tui/components/chat/messages"
-	"github.com/charmbracelet/crush/internal/tui/components/chat/sidebar"
-	"github.com/charmbracelet/crush/internal/tui/components/chat/splash"
-	"github.com/charmbracelet/crush/internal/tui/components/completions"
-	"github.com/charmbracelet/crush/internal/tui/components/core"
-	"github.com/charmbracelet/crush/internal/tui/components/core/layout"
-	"github.com/charmbracelet/crush/internal/tui/components/dialogs/commands"
-	"github.com/charmbracelet/crush/internal/tui/components/dialogs/filepicker"
-	"github.com/charmbracelet/crush/internal/tui/components/dialogs/models"
-	"github.com/charmbracelet/crush/internal/tui/page"
-	"github.com/charmbracelet/crush/internal/tui/styles"
-	"github.com/charmbracelet/crush/internal/tui/util"
-	"github.com/charmbracelet/crush/internal/version"
+	"github.com/charmbracelet/supernova/internal/app"
+	"github.com/charmbracelet/supernova/internal/config"
+	"github.com/charmbracelet/supernova/internal/history"
+	"github.com/charmbracelet/supernova/internal/message"
+	"github.com/charmbracelet/supernova/internal/permission"
+	"github.com/charmbracelet/supernova/internal/pubsub"
+	"github.com/charmbracelet/supernova/internal/session"
+	"github.com/charmbracelet/supernova/internal/tui/components/anim"
+	"github.com/charmbracelet/supernova/internal/tui/components/chat"
+	"github.com/charmbracelet/supernova/internal/tui/components/chat/editor"
+	"github.com/charmbracelet/supernova/internal/tui/components/chat/header"
+	"github.com/charmbracelet/supernova/internal/tui/components/chat/messages"
+	"github.com/charmbracelet/supernova/internal/tui/components/chat/sidebar"
+	"github.com/charmbracelet/supernova/internal/tui/components/chat/splash"
+	"github.com/charmbracelet/supernova/internal/tui/components/completions"
+	"github.com/charmbracelet/supernova/internal/tui/components/core"
+	"github.com/charmbracelet/supernova/internal/tui/components/core/layout"
+	"github.com/charmbracelet/supernova/internal/tui/components/dialogs/commands"
+	"github.com/charmbracelet/supernova/internal/tui/components/dialogs/filepicker"
+	"github.com/charmbracelet/supernova/internal/tui/components/dialogs/models"
+	"github.com/charmbracelet/supernova/internal/tui/page"
+	"github.com/charmbracelet/supernova/internal/tui/styles"
+	"github.com/charmbracelet/supernova/internal/tui/util"
+	"github.com/charmbracelet/supernova/internal/version"
 	"github.com/charmbracelet/lipgloss/v2"
 )
 
@@ -140,7 +140,7 @@ func (p *chatPage) Init() tea.Cmd {
 		p.isOnboarding = true
 		p.splashFullScreen = true
 	} else if b, _ := config.ProjectNeedsInitialization(); b {
-		// Project needs CRUSH.md initialization
+		// Project needs SUPERNOVA.md initialization
 		p.splash.SetProjectInit(true)
 		p.isProjectInit = true
 		p.splashFullScreen = true

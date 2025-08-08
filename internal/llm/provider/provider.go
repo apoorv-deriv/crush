@@ -5,9 +5,9 @@ import (
 	"fmt"
 
 	"github.com/charmbracelet/catwalk/pkg/catwalk"
-	"github.com/charmbracelet/crush/internal/config"
-	"github.com/charmbracelet/crush/internal/llm/tools"
-	"github.com/charmbracelet/crush/internal/message"
+	"github.com/charmbracelet/supernova/internal/config"
+	"github.com/charmbracelet/supernova/internal/llm/tools"
+	"github.com/charmbracelet/supernova/internal/message"
 )
 
 type EventType string

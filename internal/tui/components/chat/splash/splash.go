@@ -10,19 +10,19 @@ import (
 	"github.com/charmbracelet/bubbles/v2/spinner"
 	tea "github.com/charmbracelet/bubbletea/v2"
 	"github.com/charmbracelet/catwalk/pkg/catwalk"
-	"github.com/charmbracelet/crush/internal/config"
-	"github.com/charmbracelet/crush/internal/llm/prompt"
-	"github.com/charmbracelet/crush/internal/tui/components/chat"
-	"github.com/charmbracelet/crush/internal/tui/components/core"
-	"github.com/charmbracelet/crush/internal/tui/components/core/layout"
-	"github.com/charmbracelet/crush/internal/tui/components/dialogs/models"
-	"github.com/charmbracelet/crush/internal/tui/components/logo"
-	lspcomponent "github.com/charmbracelet/crush/internal/tui/components/lsp"
-	"github.com/charmbracelet/crush/internal/tui/components/mcp"
-	"github.com/charmbracelet/crush/internal/tui/exp/list"
-	"github.com/charmbracelet/crush/internal/tui/styles"
-	"github.com/charmbracelet/crush/internal/tui/util"
-	"github.com/charmbracelet/crush/internal/version"
+	"github.com/charmbracelet/supernova/internal/config"
+	"github.com/charmbracelet/supernova/internal/llm/prompt"
+	"github.com/charmbracelet/supernova/internal/tui/components/chat"
+	"github.com/charmbracelet/supernova/internal/tui/components/core"
+	"github.com/charmbracelet/supernova/internal/tui/components/core/layout"
+	"github.com/charmbracelet/supernova/internal/tui/components/dialogs/models"
+	"github.com/charmbracelet/supernova/internal/tui/components/logo"
+	lspcomponent "github.com/charmbracelet/supernova/internal/tui/components/lsp"
+	"github.com/charmbracelet/supernova/internal/tui/components/mcp"
+	"github.com/charmbracelet/supernova/internal/tui/exp/list"
+	"github.com/charmbracelet/supernova/internal/tui/styles"
+	"github.com/charmbracelet/supernova/internal/tui/util"
+	"github.com/charmbracelet/supernova/internal/version"
 	"github.com/charmbracelet/lipgloss/v2"
 )
 
@@ -460,7 +460,7 @@ func (s *splashCmp) View() string {
 			titleStyle.Render("Would you like to initialize this project?"),
 			"",
 			bodyStyle.Render("When I initialize your codebase I examine the project and put the"),
-			bodyStyle.Render("result into a CRUSH.md file which serves as general context."),
+			bodyStyle.Render("result into a SUPERNOVA.md file which serves as general context."),
 			"",
 			bodyStyle.Render("You can also initialize anytime via ")+shortcutStyle.Render("ctrl+p")+bodyStyle.Render("."),
 			"",

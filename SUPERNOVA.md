@@ -1,4 +1,4 @@
-# Crush Development Guide
+# Supernova Development Guide
 
 ## Build/Test/Lint Commands
 

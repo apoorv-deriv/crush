@@ -12,14 +12,14 @@ import (
 	"time"
 
 	"github.com/charmbracelet/catwalk/pkg/catwalk"
-	"github.com/charmbracelet/crush/internal/csync"
-	"github.com/charmbracelet/crush/internal/env"
+	"github.com/charmbracelet/supernova/internal/csync"
+	"github.com/charmbracelet/supernova/internal/env"
 	"github.com/tidwall/sjson"
 )
 
 const (
-	appName              = "crush"
-	defaultDataDirectory = ".crush"
+	appName              = "supernova"
+	defaultDataDirectory = ".supernova"
 )
 
 var defaultContextPaths = []string{
@@ -34,7 +34,7 @@ var defaultContextPaths = []string{
 	"crush.local.md",
 	"Crush.md",
 	"Crush.local.md",
-	"CRUSH.md",
+	"SUPERNOVA.md",
 	"CRUSH.local.md",
 	"AGENTS.md",
 	"agents.md",
@@ -133,12 +133,12 @@ type Permissions struct {
 }
 
 type Options struct {
-	ContextPaths         []string    `json:"context_paths,omitempty" jsonschema:"description=Paths to files containing context information for the AI,example=.cursorrules,example=CRUSH.md"`
+	ContextPaths         []string    `json:"context_paths,omitempty" jsonschema:"description=Paths to files containing context information for the AI,example=.cursorrules,example=SUPERNOVA.md"`
 	TUI                  *TUIOptions `json:"tui,omitempty" jsonschema:"description=Terminal user interface options"`
 	Debug                bool        `json:"debug,omitempty" jsonschema:"description=Enable debug logging,default=false"`
 	DebugLSP             bool        `json:"debug_lsp,omitempty" jsonschema:"description=Enable debug logging for LSP servers,default=false"`
 	DisableAutoSummarize bool        `json:"disable_auto_summarize,omitempty" jsonschema:"description=Disable automatic conversation summarization,default=false"`
-	DataDirectory        string      `json:"data_directory,omitempty" jsonschema:"description=Directory for storing application data (relative to working directory),default=.crush,example=.crush"` // Relative to the cwd
+	DataDirectory        string      `json:"data_directory,omitempty" jsonschema:"description=Directory for storing application data (relative to working directory),default=.supernova,example=.supernova"` // Relative to the cwd
 }
 
 type MCPs map[string]MCPConfig

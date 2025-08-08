@@ -4,10 +4,10 @@ import (
 	"encoding/json"
 	"log/slog"
 
-	"github.com/charmbracelet/crush/internal/config"
+	"github.com/charmbracelet/supernova/internal/config"
 
-	"github.com/charmbracelet/crush/internal/lsp/protocol"
-	"github.com/charmbracelet/crush/internal/lsp/util"
+	"github.com/charmbracelet/supernova/internal/lsp/protocol"
+	"github.com/charmbracelet/supernova/internal/lsp/util"
 )
 
 // Requests

@@ -9,8 +9,8 @@ import (
 	"strings"
 
 	tea "github.com/charmbracelet/bubbletea/v2"
-	"github.com/charmbracelet/crush/internal/config"
-	"github.com/charmbracelet/crush/internal/tui/util"
+	"github.com/charmbracelet/supernova/internal/config"
+	"github.com/charmbracelet/supernova/internal/tui/util"
 )
 
 const (
@@ -56,7 +56,7 @@ func buildCommandSources(cfg *config.Config) []commandSource {
 	// Home directory
 	if home, err := os.UserHomeDir(); err == nil {
 		sources = append(sources, commandSource{
-			path:   filepath.Join(home, ".crush", "commands"),
+			path:   filepath.Join(home, ".supernova", "commands"),
 			prefix: UserCommandPrefix,
 		})
 	}
@@ -78,7 +78,7 @@ func getXDGCommandsDir() string {
 		}
 	}
 	if xdgHome != "" {
-		return filepath.Join(xdgHome, "crush", "commands")
+		return filepath.Join(xdgHome, "supernova", "commands")
 	}
 	return ""
 }

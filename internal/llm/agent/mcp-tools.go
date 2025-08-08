@@ -9,12 +9,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/charmbracelet/crush/internal/config"
-	"github.com/charmbracelet/crush/internal/csync"
-	"github.com/charmbracelet/crush/internal/llm/tools"
-	"github.com/charmbracelet/crush/internal/permission"
-	"github.com/charmbracelet/crush/internal/pubsub"
-	"github.com/charmbracelet/crush/internal/version"
+	"github.com/charmbracelet/supernova/internal/config"
+	"github.com/charmbracelet/supernova/internal/csync"
+	"github.com/charmbracelet/supernova/internal/llm/tools"
+	"github.com/charmbracelet/supernova/internal/permission"
+	"github.com/charmbracelet/supernova/internal/pubsub"
+	"github.com/charmbracelet/supernova/internal/version"
 	"github.com/mark3labs/mcp-go/client"
 	"github.com/mark3labs/mcp-go/client/transport"
 	"github.com/mark3labs/mcp-go/mcp"
@@ -234,7 +234,7 @@ var mcpInitRequest = mcp.InitializeRequest{
 	Params: mcp.InitializeParams{
 		ProtocolVersion: mcp.LATEST_PROTOCOL_VERSION,
 		ClientInfo: mcp.Implementation{
-			Name:    "Crush",
+			Name:    "Supernova",
 			Version: version.Version,
 		},
 	},

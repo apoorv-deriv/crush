@@ -7,8 +7,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/charmbracelet/crush/internal/permission"
-	"github.com/charmbracelet/crush/internal/shell"
+	"github.com/charmbracelet/supernova/internal/permission"
+	"github.com/charmbracelet/supernova/internal/shell"
 )
 
 type BashParams struct {

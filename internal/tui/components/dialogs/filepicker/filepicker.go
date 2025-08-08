@@ -11,12 +11,12 @@ import (
 	"github.com/charmbracelet/bubbles/v2/help"
 	"github.com/charmbracelet/bubbles/v2/key"
 	tea "github.com/charmbracelet/bubbletea/v2"
-	"github.com/charmbracelet/crush/internal/message"
-	"github.com/charmbracelet/crush/internal/tui/components/core"
-	"github.com/charmbracelet/crush/internal/tui/components/dialogs"
-	"github.com/charmbracelet/crush/internal/tui/components/image"
-	"github.com/charmbracelet/crush/internal/tui/styles"
-	"github.com/charmbracelet/crush/internal/tui/util"
+	"github.com/charmbracelet/supernova/internal/message"
+	"github.com/charmbracelet/supernova/internal/tui/components/core"
+	"github.com/charmbracelet/supernova/internal/tui/components/dialogs"
+	"github.com/charmbracelet/supernova/internal/tui/components/image"
+	"github.com/charmbracelet/supernova/internal/tui/styles"
+	"github.com/charmbracelet/supernova/internal/tui/util"
 	"github.com/charmbracelet/lipgloss/v2"
 )
 
